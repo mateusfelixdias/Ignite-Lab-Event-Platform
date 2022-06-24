@@ -6,4 +6,4 @@ Este projeto foi inicializado com <a href="https://vitejs.dev/guide/">Vite.</a>
 instalar as depedências.
 
 <h2>npm run dev</h2>
-Executa o projeto no local: http://localhost:3000
+Executa o projeto no local: http://localhost:3000/event
