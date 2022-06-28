@@ -1,31 +1,28 @@
-import { gql, useMutation } from "@apollo/client";
 import { FormEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
+import { useCreateSubscriberMutation } from "../generated";
 
-
-const CREATE_SUBSCRIBE_MUTATION = gql`
-  mutation CreateSubscriber($name:String!, $email: String!) {
-    createSubscriber(data:{name: $name, email: $email}) {
-      id
-    }
-  }
-`
 
 export function Subscribe() {
+  const navigate = useNavigate();
+
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
 
-  const [createSubscriber] = useMutation(CREATE_SUBSCRIBE_MUTATION);
+  const [createSubscriber, { loading }] = useCreateSubscriberMutation();
   
-  function handleSubscribe (event: FormEvent){
+  async function handleSubscribe (event: FormEvent){
     event.preventDefault();
 
-    createSubscriber({
+    await createSubscriber({
       variables: {
         name,
         email,
       }
     });
+
+    navigate('/event');
   };
 
 
@@ -66,7 +63,8 @@ export function Subscribe() {
                 />
 
                 <button
-                    className="mt-4 bg-green-500 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 transition-colors"
+                    className="mt-4 bg-green-500 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 transition-colors disabled:opacity-50"
+                    disabled={loading}
                     type="submit"
                 >
                     Garantir minha vaga
@@ -76,7 +74,7 @@ export function Subscribe() {
       </div>
 
       <img
-        src="./src/assets/code-mockup.png"
+        src="./src/images/code-mockup.png"
         className="mt-10"
         alt="image de fundo."
       />
