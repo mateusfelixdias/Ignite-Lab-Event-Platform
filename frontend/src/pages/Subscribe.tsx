@@ -76,7 +76,7 @@ export function Subscribe() {
       <img
         src="./src/images/code-mockup.png"
         className="mt-10"
-        alt="image de fundo."
+        alt=""
       />
     </div>
   );
