@@ -27,24 +27,26 @@ export function Subscribe() {
 
 
   return (
-    <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
-      <div className="w-full max-w-[1100px] flex items-center justify-between mt-10 mx-auto">
-        <div className="max-w-[640px]">
-          <Logo />
+    <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center mobile:text-center">
+      <div className="w-full max-w-[1100px] flex items-center justify-between mt-10 mx-auto mobile:flex-col mobile:w-[100%]">
+        <div className="max-w-[640px] mobile:max-w-[360px]">
+          <div className="mobile:mt-2 mobile:flex mobile:flex-col mobile:items-center">
+            <Logo />
+          </div>
 
-          <h1 className="mt-8 text-[2.5rem] leading-tight">
+          <h1 className="mt-6 text-[2.5rem] leading-tight mobile:text-[2.0rem]">
             Construa uma <strong className="text-blue-500">aplicação completa</strong>, do zero, com <strong className="text-blue-500">React</strong>
           </h1>
 
-          <p>
+          <p className="mt-6">
             Em apenas uma semana você vai dominar na prática uma das tecnologias
             mais utilizadas e com alta demanda para acessar as melhores
             oportunidades do mercado.
           </p>
         </div>
 
-        <div className="p-8 bg-gray-700 border border-gray-500 rounded">
-            <strong className="text-2xl mb-6 block">
+        <div className="p-8 bg-gray-700 border border-gray-500 rounded mt-6 mobile:w-full mobile:rounded-none">
+            <strong className="text-2xl mb-6 block mobile:text-xl">
                 Inscreva-se gratuitamente
             </strong>
 

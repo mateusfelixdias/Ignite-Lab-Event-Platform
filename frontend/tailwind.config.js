@@ -35,6 +35,9 @@ module.exports = {
         }
       },
     },
+    screens: {
+      'mobile': {'min': "200px", 'max': "800px" },
+    },
   },
   plugins: [],
 };
