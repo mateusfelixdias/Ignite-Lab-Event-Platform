@@ -15,7 +15,7 @@ export function Evento({ accessClassesAndBackButton }: ShowClassOrClassOptionsAv
     <div className="flex flex-1 flex-col min-h-screen mobile:w-full">
       <div className="flex flex-1 mobile:w-full">
 
-        <div className="mobile:hidden flex-1">
+        <div className="flex-1 mobile:hidden">
           {slug ? (
             <Video lessonSlug={slug} />
           ) : (
@@ -28,7 +28,7 @@ export function Evento({ accessClassesAndBackButton }: ShowClassOrClassOptionsAv
             <Sidebar />
           </div>
         ) : (
-          <div className="pattern:hidden">
+          <div className="pattern:hidden w-full">
             {slug ? (
               <Video lessonSlug={slug} />
             ) : (

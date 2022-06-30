@@ -1,5 +1,10 @@
 import { DefaultUi, Player, Youtube } from "@vime/react";
-import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
+import {
+  CaretRight,
+  DiscordLogo,
+  FileArrowDown,
+  Lightning,
+} from "phosphor-react";
 import "@vime/core/themes/default.css";
 import { useGetLessonBySlugQuery } from "../generated";
 
@@ -20,15 +25,14 @@ export function Video({ lessonSlug }: VideoProps) {
         <strong>Cerregando...</strong>
       </div>
     );
-  };
-  
+  }
 
   return (
     <div className="flex-1 mobile:flex-col mobile:items-center">
       <div className="bg-black border border-gray-500 flex justify-center">
         <div className="aspect-video h-full w-full">
           <Player>
-            <Youtube videoId={data.lesson.videoId} key={data.lesson.videoId}/>
+            <Youtube videoId={data.lesson.videoId} key={data.lesson.videoId} />
             <DefaultUi />
           </Player>
         </div>
@@ -37,7 +41,9 @@ export function Video({ lessonSlug }: VideoProps) {
       <div className="p-8 max-w-[1100px] mx-auto">
         <div className="flex gap-16 mobile:flex-col">
           <div className="flex-1 mobile:flex-none">
-            <h1 className="text-2xl font-bold mobile:text-center mobile:text-xl">{data.lesson.title}</h1>
+            <h1 className="text-2xl font-bold mobile:text-center mobile:text-xl">
+              {data.lesson.title}
+            </h1>
 
             <p className="mt-4 text-gray-200 leading-relaxed mobile:whitespace-normal mobile:text-center">
               {data.lesson.description}
@@ -83,7 +89,7 @@ export function Video({ lessonSlug }: VideoProps) {
         </div>
 
         <div className="gap-8 mt-20 grid grid-cols-2 mobile:flex mobile:flex-col mobile:items-center">
-        <a
+          <a
             className="bg-gray-700 rounded overflow-hidden gap-6 flex items-stretch hover:bg-gray-600 transition-colors"
             href=""
           >
