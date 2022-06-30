@@ -1,7 +1,7 @@
 import { FormEvent, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
 import { useCreateSubscriberMutation } from "../generated";
+import { useNavigate } from "react-router-dom";
 
 
 export function Subscribe() {
