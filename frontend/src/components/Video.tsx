@@ -108,7 +108,7 @@ export function Video({ lessonSlug }: VideoProps) {
             </div>
           </a>
 
-          <a
+          {/* <a
             className="bg-gray-700 rounded overflow-hidden gap-6 flex items-stretch hover:bg-gray-600 transition-colors"
             href=""
           >
@@ -125,7 +125,7 @@ export function Video({ lessonSlug }: VideoProps) {
             <div className="h-full p-6 flex items-center">
               <CaretRight size={24} />
             </div>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
