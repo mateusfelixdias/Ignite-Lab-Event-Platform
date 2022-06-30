@@ -16,8 +16,8 @@ export function Video({ lessonSlug }: VideoProps) {
 
   if (!data || !data.lesson) {
     return (
-      <div className="flex-1">
-        <p>Cerregando...</p>
+      <div className="flex-1 flex justify-center mt-2">
+        <strong>Cerregando...</strong>
       </div>
     );
   };
@@ -66,7 +66,7 @@ export function Video({ lessonSlug }: VideoProps) {
           <div className="flex flex-col gap-4 mobile:items-center">
             <a
               href=""
-              className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors mobile:w-[312px]"
+              className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors mobile:w-full"
             >
               <DiscordLogo size={24} />
               Comunidade do discord
@@ -74,7 +74,7 @@ export function Video({ lessonSlug }: VideoProps) {
 
             <a
               href=""
-              className="p-4 text-sm border border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-500 hover:text-gray-900 transition-colors mobile:w-[312px]"
+              className="p-4 text-sm border border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-500 hover:text-gray-900 transition-colors mobile:w-full"
             >
               <Lightning size={24} />
               Acesse o desafio
@@ -97,7 +97,7 @@ export function Video({ lessonSlug }: VideoProps) {
                 máquina
               </p>
             </div>
-            <div className="h-full p-6 flex items-center">
+            <div className="h-full p-6 flex items-center justify-center">
               <CaretRight size={24} />
             </div>
           </a>
