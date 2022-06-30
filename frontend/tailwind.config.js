@@ -36,8 +36,8 @@ module.exports = {
       },
     },
     screens: {
-      'pattern': { 'min': '1150px', 'max': '1500px' },
       'mobile': {'min': "100px", 'max': "1150px" },
+      'pattern': { 'min': '1150px', 'max': '1500px' },
     },
   },
   plugins: [],
