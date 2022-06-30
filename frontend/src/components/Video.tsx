@@ -90,42 +90,42 @@ export function Video({ lessonSlug }: VideoProps) {
 
         <div className="gap-8 mt-20 grid grid-cols-2 mobile:flex mobile:flex-col mobile:items-center">
           <a
-            className="bg-gray-700 rounded overflow-hidden gap-6 flex items-stretch hover:bg-gray-600 transition-colors"
+            className="bg-gray-700 rounded overflow-hidden gap-6 flex items-stretch hover:bg-gray-600 transition-colors min-w-[250px] w-[95%]"
             href=""
           >
             <div className="bg-green-700 h-full-6 p-6 flex items-center">
               <FileArrowDown size={40} />
             </div>
             <div className="py-6 leading-relaxed">
-              <strong className="text-2xl">Wallpapers exclusivos</strong>
+              <strong className="text-2xl mobile:text-xl">Wallpapers exclusivos</strong>
               <p className="text-sm text-gray-200 mt-2">
                 Baixe wallpapers exclusivos do Ignite Lab e personalize a sua
                 máquina
               </p>
             </div>
-            <div className="h-full p-6 flex items-center justify-center">
+            <div className="h-full p-6 flex items-center justify-center mobile:hidden">
               <CaretRight size={24} />
             </div>
           </a>
 
-          {/* <a
-            className="bg-gray-700 rounded overflow-hidden gap-6 flex items-stretch hover:bg-gray-600 transition-colors"
+          <a
+            className="bg-gray-700 rounded overflow-hidden gap-6 flex items-stretch hover:bg-gray-600 transition-colors min-w-[250px] w-[95%]"
             href=""
           >
             <div className="bg-green-700 h-full-6 p-6 flex items-center">
               <FileArrowDown size={40} />
             </div>
             <div className="py-6 leading-relaxed">
-              <strong className="text-2xl">Material complementar</strong>
+              <strong className="text-2xl mobile:text-xl">Material complementar</strong>
               <p className="text-sm text-gray-200 mt-2">
                 Acesse o material complementar para acelerar o seu
                 desenvolvimento
               </p>
             </div>
-            <div className="h-full p-6 flex items-center">
+            <div className="h-full p-6 flex items-center justify-center mobile:hidden">
               <CaretRight size={24} />
             </div>
-          </a> */}
+          </a>
         </div>
       </div>
     </div>
