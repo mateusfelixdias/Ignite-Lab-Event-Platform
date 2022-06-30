@@ -24,7 +24,7 @@ export function Evento({ accessClassesAndBackButton }: ShowClassOrClassOptionsAv
         </div>
         
         {accessClassesAndBackButton ? (
-          <div className="flex mobile:flex-1 mobile:justify-center">
+          <div className="flex mobile:flex-1 mobile:justify-center pattern:hidden">
             <Sidebar />
           </div>
         ) : (
