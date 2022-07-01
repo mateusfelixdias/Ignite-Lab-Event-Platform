@@ -6,9 +6,7 @@ import { Router } from "./Router";
 export function App() {
   return (
     <ApolloProvider client={client}>
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
+      <Router />
     </ApolloProvider>
   );
 };
