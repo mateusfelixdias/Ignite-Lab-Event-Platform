@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "github": {
+    "silent": true
+  },
+  "regions": [
+    "fra1"
+  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+}
