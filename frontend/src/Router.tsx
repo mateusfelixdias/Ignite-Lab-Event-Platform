@@ -6,7 +6,7 @@ export function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/*" element={<Subscribe />} />
+        <Route path="*" element={<Subscribe />} />
         <Route path="/event" element={<Main />} />
         <Route path="/event/lesson/:slug" element={<Main />} />
       </Routes>
