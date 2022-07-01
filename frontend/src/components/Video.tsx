@@ -1,10 +1,5 @@
 import { DefaultUi, Player, Youtube } from "@vime/react";
-import {
-  CaretRight,
-  DiscordLogo,
-  FileArrowDown,
-  Lightning,
-} from "phosphor-react";
+import { DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
 import "@vime/core/themes/default.css";
 import { useGetLessonBySlugQuery } from "../generated";
 
@@ -103,9 +98,6 @@ export function Video({ lessonSlug }: VideoProps) {
                 máquina
               </p>
             </div>
-            <div className="h-full p-6 flex items-center justify-center mobile:hidden">
-              <CaretRight size={24} />
-            </div>
           </a>
 
           <a
@@ -121,9 +113,6 @@ export function Video({ lessonSlug }: VideoProps) {
                 Acesse o material complementar para acelerar o seu
                 desenvolvimento
               </p>
-            </div>
-            <div className="h-full p-6 flex items-center justify-center mobile:hidden">
-              <CaretRight size={24} />
             </div>
           </a>
         </div>
