@@ -3,7 +3,6 @@ import { Logo } from "../components/Logo";
 import { useCreateSubscriberMutation } from "../generated";
 import { useNavigate } from "react-router-dom";
 
-
 export function Subscribe() {
   const navigate = useNavigate();
 
@@ -14,6 +13,10 @@ export function Subscribe() {
   
   async function handleSubscribe (event: FormEvent){
     event.preventDefault();
+
+    if(!name || !email){
+      window.alert('Os dados estão inválidos, tente novemente.');
+    };
 
     await createSubscriber({
       variables: {
