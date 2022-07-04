@@ -20,7 +20,7 @@ export function Video({ lessonSlug }: VideoProps) {
         <strong>Cerregando...</strong>
       </div>
     );
-  }
+  };
 
   return (
     <div className="flex-1 mobile:flex-col mobile:items-center">
