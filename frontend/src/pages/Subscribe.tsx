@@ -4,7 +4,7 @@ import { useCreateSubscriberMutation } from "../generated";
 import { useNavigate } from "react-router-dom";
 import { setAuthentication } from "../auth/setAuthentication";
 import { removeAuthentication } from "../auth/removeAuthentication";
-
+import codeMockup from "../../src/images/code-mockup.png";
 
 export function Subscribe() {
   const navigate = useNavigate();
@@ -89,7 +89,7 @@ export function Subscribe() {
         </div>
       </div>
 
-      <img src="./src/images/code-mockup.png" className="mt-10" alt="" />
+      <img src={codeMockup} className="mt-10" alt="" />
     </div>
   );
 };
