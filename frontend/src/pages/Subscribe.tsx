@@ -1,7 +1,10 @@
 import { FormEvent, useState } from "react";
 import { Logo } from "../components/Logo";
-import { useCreateSubscriberMutation, useGetSubscriberQuery } from "../generated";
+import { useCreateSubscriberMutation } from "../generated";
 import { useNavigate } from "react-router-dom";
+import { setAuthentication } from "../auth/setAuthentication";
+import { removeAuthentication } from "../auth/removeAuthentication";
+
 
 export function Subscribe() {
   const navigate = useNavigate();
@@ -11,25 +14,23 @@ export function Subscribe() {
 
   const [createSubscriber, { loading }] = useCreateSubscriberMutation();
 
-  const { data } = useGetSubscriberQuery({
-    variables: {
-      email: "joão@gmail.com"
-     }
-  });
-
-
   async function handleSubscribe(event: FormEvent) {
     event.preventDefault();
 
     if (!name || !email) {
+      removeAuthentication();
+
       window.alert("Os dados estão inválidos, tente novemente.");
     } else {
+      setAuthentication();
+
       await createSubscriber({
         variables: {
           name,
           email
         }
       });
+
       navigate("/event");
     };
   };
