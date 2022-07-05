@@ -4,6 +4,9 @@ Este projeto foi inicializado com <a href="https://vitejs.dev/guide/">Vite.</a>
 # hospedagem.
 O frontend foi hospedado na: <a href="https://vercel.com/">Vercel.</a>
 
+Você pode acessar o app logo ao lado &#x1F603;:
+<a href="https://ignite-bpg2zp4cj-mateusfelixdias.vercel.app/">Platform.</a>
+
 # Caso você queira o projeto em seu ambiente de desenvolvimento.
 <h2>npm i</h2>
 instalar as depedências.
