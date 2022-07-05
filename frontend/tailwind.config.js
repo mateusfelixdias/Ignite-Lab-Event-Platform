@@ -1,13 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 
-const blur = "./src/images/blur-background.png";
-
 module.exports = {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
       backgroundImage: {
-        blur: `url(${blur})`
+        blur: `url("./src/images/blur-background.png")`
       },
       fontFamily: {
         sans: 'Roboto, sans-sefif'
