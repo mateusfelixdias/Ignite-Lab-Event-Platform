@@ -69,12 +69,14 @@ export function Subscribe() {
               className="bg-gray-900 rounded px-5 h-14"
               type="text"
               placeholder="Digite seu nome completo"
+              required
               onChange={(event) => setName(event.target.value)}
             />
             <input
               className="bg-gray-900 rounded px-5 h-14"
-              type="text"
+              type="email"             
               placeholder="Digite seu e-mail"
+              required
               onChange={(event) => setEmail(event.target.value)}
             />
 
