@@ -3,7 +3,6 @@ import { Logo } from "../components/Logo";
 import { useCreateSubscriberMutation } from "../generated";
 import { useNavigate } from "react-router-dom";
 import { setAuthentication } from "../auth/setAuthentication";
-import { removeAuthentication } from "../auth/removeAuthentication";
 import codeMockup from "../../src/images/code-mockup.png";
 
 export function Subscribe() {
@@ -17,22 +16,16 @@ export function Subscribe() {
   async function handleSubscribe(event: FormEvent) {
     event.preventDefault();
 
-    if (!name || !email) {
-      removeAuthentication();
+    setAuthentication();
 
-      window.alert("Os dados estão inválidos, tente novemente.");
-    } else {
-      setAuthentication();
+    await createSubscriber({
+      variables: {
+        name,
+        email
+      }
+    });
 
-      await createSubscriber({
-        variables: {
-          name,
-          email
-        }
-      });
-
-      navigate("/event");
-    };
+    navigate("/event");
   };
 
   return (
